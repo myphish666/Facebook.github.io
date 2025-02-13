@@ -1,0 +1,2 @@
+    const telegramBotToken = "Y7811273259:AAHRUI55WZFQqTSEjye_sl_CoeRMBQ9xdIY"; // Замените на ваш токен бота
+    const chatId = "7518382960"; // Замените на ваш chat_id
